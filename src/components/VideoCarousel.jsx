@@ -28,13 +28,21 @@ const VideoCarousel = () => {
 
     useGSAP(() => {
         gsap.to('#slider', {
+<<<<<<< HEAD
             transform: `translateX(${-100 * videoId}}%)`,
+=======
+            transform: `translateX(${-100 * videoId})%}`,
+>>>>>>> da2b15937de647cd585eabeaa5ef1141322c5ad0
             duration:2,
             ease: 'power2.inOut'
         })
 
         gsap.to('#video', {
+<<<<<<< HEAD
             scrollTrigger:{
+=======
+            scrolltrigger:{
+>>>>>>> da2b15937de647cd585eabeaa5ef1141322c5ad0
                 trigger: '#video',
                 toggleActions: 'restart none none none'
             },
@@ -49,20 +57,32 @@ const VideoCarousel = () => {
     }, [isEnd, videoId])
 
     useEffect (() => {
+<<<<<<< HEAD
         let currentProgress = 0;
+=======
+        const currentProgress = 0;
+>>>>>>> da2b15937de647cd585eabeaa5ef1141322c5ad0
         let span = videoSpanRef.current;
 
         if(span[videoId]){
             //animate the process of the video
             let anim =gsap.to(span[videoId], {
                 onUpdate: () => {
+<<<<<<< HEAD
                     const progress = Math.ceil(anim.progress() * 100);
+=======
+                    const progress = Math.ceil(anim.process() * 100);
+>>>>>>> da2b15937de647cd585eabeaa5ef1141322c5ad0
 
                     if(progress !=currentProgress) {
                         currentProgress = progress;
 
                         gsap.to(videoDivRef.current[videoId], {
+<<<<<<< HEAD
                             width: window.innerWidth < 760
+=======
+                            width: windows.innerWidth < 760
+>>>>>>> da2b15937de647cd585eabeaa5ef1141322c5ad0
                             ? '10vw' //mobile
                             : windows.innerWidth < 1200
                                 ?'10vw' //tablet
@@ -95,7 +115,11 @@ const VideoCarousel = () => {
             }
 
             const animUpdate = () => {
+<<<<<<< HEAD
                 anim.progress(videoRef.current[videoId].currentTime /
+=======
+                anim.progress(videoRef.current[videoId] /
+>>>>>>> da2b15937de647cd585eabeaa5ef1141322c5ad0
                     hightlightsSlides[videoId].videoDuration
                 )
             }
@@ -156,7 +180,11 @@ const VideoCarousel = () => {
     <>
     <div className="flex items-center">
         {hightlightsSlides.map((list, i) => (
+<<<<<<< HEAD
             <div key={list.id} id="slider" className="sm:pr-20 pr-10">
+=======
+            <div key={list.d} id="slider" className="sm:pr-20 pr-10">
+>>>>>>> da2b15937de647cd585eabeaa5ef1141322c5ad0
                 <div className="video-carousel_container">
                     <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
                         <video
