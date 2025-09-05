@@ -1,12 +1,88 @@
-# React + Vite
+# Apple Website — Demo Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A small frontend project replicating an Apple-style landing page and UI components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+![Website UI Preview](/public/assets/images/screenshot.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+---
+
+## About
+
+This repository contains a Vite + React project that recreates an Apple-like website layout for practice and portfolio purposes. It focuses on responsive layout, polished UI components, and media assets.
+
+## Built With
+
+* Vite (React)
+* React
+* Tailwind CSS (optional)
+* Node.js
+
+## Project Structure
+
+```
+public/
+  └─ assets/
+     └─ images/          # add screenshots and images here
+src/
+  ├─ components/        # React components
+  ├─ constants/
+  ├─ utils/
+  └─ main.jsx
+
+package.json
+vite.config.js
+README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js (v16+ recommended)
+* npm or yarn
+
+### Install
+
+```bash
+git clone <repo-url>
+cd apple-website
+npm install
+# or
+# yarn
+```
+
+### Run Locally
+
+```bash
+npm run dev
+```
+
+The dev server will usually run at `http://localhost:5173/`.
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Contributing
+
+Contributions welcome — open an issue or a PR with descriptive commits. Use conventional commit prefixes like `feat:`, `fix:`, `docs:`.
+
+## License
+
+Add a `LICENSE` file if you want to publish this project. Otherwise the repository is `All rights reserved`.
+
+## Contact
+
+sai abbhiram — [email](valupadasusaiabbhiram@gmail.com)
+
+---
+
+*Last updated: 2025-09-05*

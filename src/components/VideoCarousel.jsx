@@ -28,13 +28,13 @@ const VideoCarousel = () => {
 
     useGSAP(() => {
         gsap.to('#slider', {
-            transform: `translateX(${-100 * videoId})%}`,
+            transform: `translateX(${-100 * videoId}}%)`,
             duration:2,
             ease: 'power2.inOut'
         })
 
         gsap.to('#video', {
-            scrolltrigger:{
+            scrollTrigger:{
                 trigger: '#video',
                 toggleActions: 'restart none none none'
             },
@@ -49,20 +49,20 @@ const VideoCarousel = () => {
     }, [isEnd, videoId])
 
     useEffect (() => {
-        const currentProgress = 0;
+        let currentProgress = 0;
         let span = videoSpanRef.current;
 
         if(span[videoId]){
             //animate the process of the video
             let anim =gsap.to(span[videoId], {
                 onUpdate: () => {
-                    const progress = Math.ceil(anim.process() * 100);
+                    const progress = Math.ceil(anim.progress() * 100);
 
                     if(progress !=currentProgress) {
                         currentProgress = progress;
 
                         gsap.to(videoDivRef.current[videoId], {
-                            width: windows.innerWidth < 760
+                            width: window.innerWidth < 760
                             ? '10vw' //mobile
                             : windows.innerWidth < 1200
                                 ?'10vw' //tablet
@@ -95,7 +95,7 @@ const VideoCarousel = () => {
             }
 
             const animUpdate = () => {
-                anim.progress(videoRef.current[videoId] /
+                anim.progress(videoRef.current[videoId].currentTime /
                     hightlightsSlides[videoId].videoDuration
                 )
             }
@@ -156,7 +156,7 @@ const VideoCarousel = () => {
     <>
     <div className="flex items-center">
         {hightlightsSlides.map((list, i) => (
-            <div key={list.d} id="slider" className="sm:pr-20 pr-10">
+            <div key={list.id} id="slider" className="sm:pr-20 pr-10">
                 <div className="video-carousel_container">
                     <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
                         <video
